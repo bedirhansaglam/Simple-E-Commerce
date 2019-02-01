@@ -10,7 +10,7 @@ public class Supplier
 	{
 	}
 	
-	public Supplier (int supplierId, int storeId, String username, String email, String password, String name, String surname, String phone, String mobilePhone)
+	public Supplier (int supplierId, int storeId, String username, String email, String password, String name, String surname, String phone, String mobilePhone, boolean isAdmin)
 	{
 		this.supplierId=supplierId;
 		this.storeId=storeId;
@@ -21,6 +21,7 @@ public class Supplier
 		this.surname=surname;
 		this.phone=phone;
 		this.mobilePhone=mobilePhone;
+		this.isAdmin=isAdmin;
 	}
 
 	public int getSupplierId() {
