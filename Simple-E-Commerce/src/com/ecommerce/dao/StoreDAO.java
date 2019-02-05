@@ -23,13 +23,12 @@ public class StoreDAO
 	{
 		try
 		{
-			cs=con.prepareCall ("{ CALL createStore ( ?, ?, ?, ?, ?, ? )}"); 
-			cs.setInt(1, store.getStoreId());
-			cs.setString(2, store.getStoreName());
-			cs.setString(3, store.getTaxNumber());
-			cs.setString(4, store.getAddress());
-			cs.setString(5, store.getPhone());
-			cs.setString(6, store.getLogoUrl());
+			cs=con.prepareCall ("{ CALL createStore ( ?, ?, ?, ?, ? )}"); 
+			cs.setString(1, store.getStoreName());
+			cs.setString(2, store.getTaxNumber());
+			cs.setString(3, store.getAddress());
+			cs.setString(4, store.getPhone());
+			cs.setString(5, store.getLogoUrl());
 			cs.execute();
 			return true;
 		}
